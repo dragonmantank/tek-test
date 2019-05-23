@@ -1,0 +1,12 @@
+version: '3.4'
+services:
+    cli:
+        build:
+            context: ./
+            target: base_cli
+        working_dir: /var/www
+        volumes:
+            - ./:/var/www
+        command:
+            - php
+            - index.php

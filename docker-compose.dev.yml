@@ -1,0 +1,12 @@
+version: '3.4'
+services:
+    unittests:
+        build:
+            context: ./
+            target: dev_cli
+        working_dir: /var/www
+        volumes:
+            - ./:/var/www
+        command:
+            - php
+            - vendor/bin/phpunit
